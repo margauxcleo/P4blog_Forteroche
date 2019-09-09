@@ -1,0 +1,59 @@
+<?php ob_start(); ?>
+
+<section class="bloc_page2 container-fluid">
+	
+	<div class="row">
+      
+	    <?php require("backAside.php") ?>
+
+	    <div class="admin col-xs-12 col-sm-12 col-md-8  col-lg-9 col-xl-10">
+
+	      	<div class="row">
+        		<div class="col-12 text-center">
+  		          	<h2>Modifier un chapitre</h2>
+	    		</div>
+    		</div>
+
+    		<div>
+  				<table class="table table-light table-bordered table-hover table-responsive-lg">
+  					<thead class="thead-light">
+  						<tr>
+  							<th>Titre du chapitre</th>
+  							<th class="publication_date">Date de publication</th>
+  							<th>Modifier</th>
+  						</tr>
+  					</thead>
+  					<tbody>
+  						<?php 
+  						while ($data = $posts->fetch())
+						{
+						?>
+						<tr>
+							<th>
+								<i class="fas fa-bookmark"></i>
+								<?php echo htmlspecialchars($data['title']); ?>
+							</th>
+							<th class="publication_date publication_date_fr">
+								le <?php echo htmlspecialchars($data['publication_date_fr']); ?>
+										
+							</th>
+							<th>
+								<a href="index.php?action=updateAPost&amp;id=<?= $data['id'] ?>" class="btn btn-outline-primary btn-post" role="button">
+									<i class="fas fa-edit"></i>
+								</a>
+							</th>
+						</tr>	
+						<?php 
+						}   
+						$posts->closeCursor();
+						?>	
+  					</tbody>
+  				</table>
+			</div>
+		</div>
+	</div>
+</section>
+
+<?php $content = ob_get_clean(); ?>
+
+<?php require('backTemplate.php'); ?>
