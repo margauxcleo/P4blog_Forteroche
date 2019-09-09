@@ -1,0 +1,784 @@
+
+/* Projet4: Blog de Jean Forteroche */
+
+/* ---------------------------------------- */
+/* ---- == SUMMARY ----*/
+/*---------------------------------------- */ 
+ 
+/* L - 1 - */
+/* L - 2 - */ 
+/* L - 3 - */ 
+ 
+/* ---------------------------------------- */
+/* ---- == COLOR CODES ----*/
+/*---------------------------------------- */
+/* 
+
+#343a40: major grey (nav, footer, body)
+Dark Glodenroad: #BC7C0C (pubication date)
+
+Skyblue : #6DC8E5
+Light Steel Blue : #D1D9E1
+Dark Okive Green : #575A43
+Steel Blue : #5F98C5 
+
+table by bootstrap: #dee2e6;
+warning (comments & signaled comments):; #BE3D20;
+
+*/ 
+/* ---------------------------------------- */ 
+/* ---- == DÉFINITIONS DES POLICES ----*/ 
+/*---------------------------------------- */ 
+@font-face {
+    font-family: 'open_sansregular';
+    src: url('../polices/open_sans_regular/OpenSans-Regular-webfont.eot');
+    src: url('../polices/open_sans_regular/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../polices/open_sans_regular/OpenSans-Regular-webfont.woff2') format('woff2'),
+         url('../polices/open_sans_regular/OpenSans-Regular-webfont.woff') format('woff'),
+         url('../polices/open_sans_regular/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('../polices/open_sans_regular/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'code_bold';
+    src: url('../polices/code_bold/code_bold.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'code_light';
+    src: url('../polices/code_light/code_light.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bellota_regular';
+    src: url('../polices/bellota_regular/Bellota-Regular-webfont.eot');
+    src: url('../polices/bellota_regular/Bellota-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../polices/bellota_regular/Bellota-Regular-webfont.woff2') format('woff2'),
+         url('../polices/bellota_regular/Bellota-Regular-webfont.woff') format('woff'),
+         url('../polices/bellota_regular/Bellota-Regular-webfont.ttf') format('truetype'),
+         url('../polices/bellota_regular/Bellota-Regular-webfont.svg#bellotaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ---------------------------------------- */ 
+/* ---- == ÉLÉMENTS PRINCIPAUX ----*/ 
+/*---------------------------------------- */ 
+body
+{
+    font-family: 'bellota_regular', 'open_sansregular', sans-serif!important ;
+    font-size: 1em!important;
+    width: 100%!important;
+    color: #343a40!important;
+
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: top; 
+    background-size: cover;
+}
+
+img
+{
+    width: 100%;
+}
+
+.row
+{
+    margin:0!important;
+}
+
+h2
+{
+    font-family: 'bellota_regular', 'code_bold', 'open_sansregular', sans-serif!important ;
+    font-size: 1.6em!important;
+    font-style: italic;
+}
+
+h3, #front-aside a 
+{
+    font-family: 'code_bold', 'open_sansregular', sans-serif!important ;
+    font-size: 1.2em!important;
+}
+
+.admin h2
+{
+    font-weight: bold;
+    border-bottom: 2px ridge #343a40;
+    padding-bottom: 10px;
+}
+
+/* ---------------------------------------- */ 
+    /*---- == BUTTONS ----*/
+
+    /* ---------------------------------------- */
+    /*---- top & back ----*/
+
+    .btn-top, .btn-back
+    {
+        background-color: #343a40 ;
+        border-color:#343a40 ;
+        color:#FFF;
+    }
+    .btn-top:hover , .btn-back:hover 
+    {
+        background-color: #5F98C5 ;
+        border-color:#5F98C5 ;
+        color:#FFF;
+    }
+    .btn-top:not(:disabled):not(.disabled):active, .btn-back:not(:disabled):not(.disabled):active
+    {
+        background-color: #5F98C5 ;
+        border-color:#5F98C5 ;
+        color:#FFF;
+    }
+    .btn-top:focus, .btn-back:focus
+    {
+       box-shadow: 0 0 0 0.2rem rgba(95,152,197,.5);
+    }
+
+    /* ---------------------------------------- */
+    /*---- post & submit ----*/
+
+    .btn-post, .btn-submit
+    {
+        background-color: #5F98C5;
+        border-color:#5F98C5;
+        color:#FFF;
+    }
+    .btn-post:hover, .btn-submit:hover
+    {
+        background-color: #BC7C0C;
+        border-color:#BC7C0C;
+        color:#FFF;
+    }
+    .btn-post:not(:disabled):not(.disabled):active, .btn-submit:not(:disabled):not(.disabled):active
+    {
+        background-color: #5F98C5;
+        border-color:#5F98C5;
+        color:#FFF;
+    }
+    .btn-post:focus, .btn-submit:focus
+    {
+       box-shadow: 0 0 0 0.2rem rgba(95,152,197,.5);
+    }
+
+        /* ---------------------------------------- */
+        /*---- admin form bnt submit ----*/
+
+        .admin form .btn-submit
+        {
+            margin-bottom: 10px;
+        }
+
+    /* ---------------------------------------- */
+    /*---- header & footer ----*/
+
+    .btn-footer, .btn-header
+    {
+        background-color: #343a40;
+        border-color:#343a40 ;
+        color:#FFF;
+    }
+    .btn-footer:hover, .btn-header:hover
+    {
+        background-color: #5F98C5 ;
+        border-color:#5F98C5 ;
+        color:#FFF;
+    }
+    footer [type=button], footer [type=reset], footer [type=submit], footer button, header [type=button], header [type=reset], header [type=submit], header button {
+    -webkit-appearance: none;
+    }
+
+    /* ---------------------------------------- */
+    /*---- front-aside ----*/ 
+
+    #aside-navbar ul
+    {
+        width: 100%;
+    }
+    .btn-aside
+    {
+        background-color: #FFF;
+        color:#343a40;
+    }
+    .btn-aside:hover
+    {
+        background-color: #5F98C5 ;
+        border-color:#5F98C5 ;
+        color:#FFF;
+    }
+    #front-aside [type=button], #front-aside [type=reset], #front-aside [type=submit], #front-aside button {
+    -webkit-appearance: none;
+    }
+
+    .btn-aside:not(:disabled):not(.disabled):active
+    {
+        background-color: #5F98C5 ;
+        border-color:#5F98C5 ;
+        color:#FFF;
+    }
+
+    /* ---------------------------------------- */
+    /*---- warning button ----*/
+
+    .btn-outline-danger
+    {
+        background-color: #FFF;
+        color:#BE3D20;
+        border-color: #BE3D20;
+    }
+    .btn-outline-danger:hover
+    {
+        background-color: #BE3D20;
+        border-color: #BE3D20;
+    }
+    .warning-btn:not(:disabled):not(.disabled):active
+    {
+        background-color: #BE3D20;
+        border-color: #BE3D20;
+        color:#FFF;
+    }
+    
+
+/* ---------------------------------------- */ 
+    /*---- == ALL FORMS ----*/
+
+    .bloc_page form
+    {
+        background-color: #FFF;
+        padding-bottom: 10px;
+    }
+    form h3
+    {
+        padding: 10px;
+        color: #5F98C5;
+    } 
+    .form-control:focus
+    {
+        border-color: #5F98C5;
+        box-shadow: 0 0 0 0.2rem rgba(95,152,197,.5);
+    }
+    form label
+    {
+        font-weight: bold;
+    }
+
+    /* ---------------------------------------- */
+        /*---- BACK FORMS ----*/
+
+       .back-form label
+       {
+        color: #BC7C0C;
+        font-size: 1.1em;
+       }
+       .back-form .fas
+       {
+        font-size: 1.3em;
+       }
+
+/* ---------------------------------------- */
+    /*---- sign and register view ----*/
+
+    .signin_form, .register_form, .register_form span
+    {
+    background-color: #FFF;
+    margin-bottom:0px!important;
+    padding-bottom: 10px!important;
+    } 
+
+/* ---------------------------------------- */       
+    /*---- ALL TABLES (back) ----*/ 
+
+    .table
+    {
+        color: #343a40!important;
+    }
+    .table thead
+    {
+        font-family: 'code_bold', 'open_sansregular', sans-serif!important ;
+        font-size: 1.2em!important;
+    }
+    .table .thead-light th
+    {
+        color: #343a40!important;
+        background-color: transparent!important;
+    }
+    .table th
+    {
+        border-color: #dee2e6;
+    } 
+    .table-hover tbody tr.warning 
+    {
+    background-color: rgba(190, 61, 32, 1);
+    color: #FFF;
+    }
+    .table-hover tbody tr.warning:hover
+    {
+    background-color: rgba(152, 50, 27, 1);
+    color: #FFF;
+    }
+    tr.warning .publication_date
+    {
+        color: #FFF;
+    }
+    
+
+    /* ---------------------------------------- */
+        /*---- table Posts ----*/
+
+       .publication_date
+       {
+        display: none;
+       }
+
+/* ---------------------------------------- */ 
+/* ---- == HEADER ---- */ 
+/*---------------------------------------- */ 
+ 
+/* ---------------------------------------- */
+    /*---- header titre sur image ----*/
+
+    .texte-header
+    {
+        display: none;
+    }
+     
+/* ---------------------------------------- */
+    /*----- Navigation ----*/ 
+
+    nav .navbar-brand
+    {
+        font-family: 'code_light',sans-serif!important;
+    }
+    .bg-dark
+    {
+        background-color: #343a40!important;
+    }   
+    .nav-networks
+    {
+        display: none;
+    }
+
+/* ---------------------------------------- */ 
+/* ---- == BLOC PAGE ----*/ 
+/*---------------------------------------- */ 
+
+.bloc_page
+{
+    margin-top: 100px;
+}
+
+/* ---------------------------------------- */
+    /*---- only back view ----*/
+    #back_template .bloc_page2
+    {
+        padding: 0!important;
+    }
+
+/* ---------------------------------------- */
+    /*---- POSTS ----*/
+
+    .publication_date_fr
+    {
+        font-style: italic;
+        font-weight: bold;
+        color: #BC7C0C;
+    }
+
+/* ---------------------------------------- */
+    /*---- COMMENTS ----*/ 
+
+    .comments
+    {
+        border-top: 2px ridge #343a40;
+        padding: 10px;
+        text-align: justify;
+    }
+    .comments .comment
+    {
+        border-bottom: 1px ridge #343a40;
+    }
+    .comment
+    {
+        padding: 5px 0 5px 0;
+    }
+
+/* ---------------------------------------- */
+    /*---- COMMENTS FORM ----*/
+
+    .comments-section #addCommentForm
+    {
+        border-top: 2px ridge #343a40;
+    }
+
+/* ---------------------------------------- */     
+    /*---- mutliple concern (post - post - aside - comments - stats) ----*/ 
+        
+
+    #front-aside, .posts, .post, .error_message, .comments-section, .stats, .support, .website_infos, .cookies 
+    {
+        background-color: #FFF;
+    }
+    .posts .resume, .posts .content 
+    {
+        text-align: justify;
+    }
+
+    /* ---------------------------------------- */ 
+        /*---- only back view ----*/
+
+        #back-aside-section
+        {
+            padding-left: 0!important;
+            background-color: #343a40;
+        }
+        .admin
+        {
+            background-color: rgba(255,255,255,0.7);
+        }
+        .admin h2
+        {
+            margin-top: 15px;
+        }
+        .admin .support span
+        {
+            font-weight: bold;
+            color:#BE3D20;
+        }
+        .admin .cookies
+        {
+            padding:10px;
+        }
+        .admin .intro
+        {
+            text-decoration: underline;
+        }
+
+
+/* ---------------------------------------- */
+    /*---- mostly individuals ----*/
+
+    /* ---------------------------------------- */
+        /*---- articles ----*/
+
+        article h3
+        {
+            color: #5F98C5;
+            font-size:1.3em!important;   
+        }
+        article .content
+        {
+            padding: 10px;
+        }
+
+    /* ---------------------------------------- */
+        /*---- posts ----*/
+
+        .post
+        {
+            padding: 0!important;
+        }
+        .posts h2,.posts article, .post p, .post h3, .post .comments-section
+        {
+            padding:10px!important;
+        }
+        .post p
+        {
+            text-indent: 5em each-line;
+        }
+        .posts article, .posts h2
+        {
+            margin: 0!important;
+        }
+        .posts article
+        {
+            border-top: 2px groove #343a40;
+        }
+        .listAllPosts ul 
+        {
+            padding:0px!important;
+        }
+
+    /* ---------------------------------------- */
+        /*---- error msg ----*/
+
+        .error_message
+        {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+    /* ---------------------------------------- */
+        /*---- website infos ----*/
+        .website_infos h2 
+        {
+            padding: 10px;
+            border-bottom: 2px ridge #343a40;
+            text-align: justify;
+        }
+
+
+/* ---------------------------------------- */ 
+/* ---- == FOOTER ---- */ 
+/*---------------------------------------- */ 
+
+/* ---------------------------------------- */
+    /*---- fond ----*/ 
+    footer
+    {
+        background-color: #343a40!important;
+    }
+
+/* ---------------------------------------- */
+    /*---- couleur police ----*/
+    footer
+    {
+        color: #FFF;
+    }
+    footer ul
+    {
+        list-style: none;
+        margin-top: 20px!important;
+    }
+    footer ul
+    {
+        border-bottom: 2px groove #FFF;
+        padding: 15px!important;
+    }
+    .copyright
+    {
+        text-align: center;
+    } 
+ 
+/* ---------------------------------------- */ 
+/* ---- == MEDIAS QUERIS ---- */ 
+/*---------------------------------------- */ 
+
+
+/* ---- == entre 300 et 337px ---- */
+
+@media screen and (min-width: 300px) and (max-width: 337px) {
+
+/* ---------------------------------------- */
+/*---- == HEADER ----*/
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+    /*---- back header ----*/
+    .bloc_page
+    {
+        margin-top: 85px!important;
+    }
+
+}
+
+/* ---- == entre 300 et 767px ---- */
+
+@media screen and (min-width: 337px) and (max-width: 767px) { 
+
+/* ---------------------------------------- */
+/* ---- == HEADER ---- */
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+    /*---- Navigation ----*/
+
+    /* pour que le titre aille à la ligne - empeche le contenu de prendre toute la largeur disponible */
+    .navbar-brand
+    {
+        white-space: normal!important;
+    }
+
+/* ---------------------------------------- */
+    /*---- back header ----*/
+    .bloc_page2
+    {
+        margin-top: 56px;
+    }
+
+}
+
+/* ---- == entre 394 et 767px ---- */
+
+@media screen and (min-width: 394px) and (max-width: 767px) {
+
+    .bloc_page
+    {
+        margin-top: 56px;
+    }
+}
+
+/* ---- == à partir de 767.98px ---- */
+
+@media(min-width:767.98px) {
+
+/* ---------------------------------------- */
+/* ---- == HEADER ---- */
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+    /*---- header - titre ----*/
+
+    .texte-header
+    {
+        display: block;
+        margin-top: 110px;
+    }
+
+    header h1, header p
+    {
+        font-family: 'code_light',sans-serif!important;
+        font-size: 2em!important; 
+        font-weight: bold;
+        color: #343a40 ;
+        padding: 10px;
+        text-shadow: 1px 1px 2px #343a40; 
+    }
+
+    header p
+    {
+        border-top: 3px groove #343a40;
+    }
+
+/* ---------------------------------------- */
+    /*---- Navigation ----*/ 
+
+    .nav-networks 
+    {
+        display: flex;
+    }
+
+/* ---------------------------------------- */
+/* ---- == BLOC PAGE ---- */
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+   /*---- posts (+idem post & aside & error message) ----*/ 
+ 
+    .bloc_page
+    {
+        margin-top: 20px;
+    }
+    .bloc_page2
+    {
+        margin-top: 56px;
+    }
+
+/* ---------------------------------------- */
+    /*---- aside ----*/ 
+
+    #front-aside
+    {
+        padding: 0px!important;
+        border-right: 1px groove #343a40!important;
+    }
+    #front-aside nav
+    {
+        padding: 0px!important;
+    }
+
+    
+    .bloc_img
+    {
+        padding: 0px!important;
+    }
+
+/* ---------------------------------------- */
+    /*---- table back ----*/
+
+    .publication_date
+    {
+    display: table-cell;
+    }
+}
+ 
+/* ---- == à partir de 992px ---- */
+
+@media(min-width:992px) {
+
+/* ---------------------------------------- */
+/* ---- == HEADER ---- */
+/* ---------------------------------------- */
+
+/* ---------------------------------------- */
+    /*---- header titre ----*/
+
+    header h1
+    {
+        font-size: 2.4em!important;
+    }
+    header .texte-header
+    {
+        margin-top: 125px;
+    }
+
+/* ---------------------------------------- */
+    /*---- Navigation ----*/ 
+
+    nav .navbar-brand
+    {
+        font-size: 1.25em;
+
+    }
+}
+
+/* ---- == à partir de 1200px ---- */
+
+@media(min-width:1200px) {
+
+/* -------- == section article  ------------*/
+
+    .bloc_page
+    {
+        margin-top: 50px;
+    }
+
+/* ---------------------------------------- */
+/* ---- == HEADER ---- */
+/* ---------------------------------------- */
+
+    /* -------- header titre ---------*/
+
+    header h1
+    {
+        font-size: 2.5em!important;
+    }
+    header .texte-header
+    {
+        margin-top: 150px;
+    }
+
+    /* ------------- Navigation ------------*/ 
+        
+    nav .navbar-brand
+    {
+        font-size: 1.5em;
+    }
+}
+
+/* ---- == à partir de 1440px ---- */
+
+@media(min-width:1440px) {
+
+/* -------- == HEADER ------------*/
+
+    /* -------- header titre ---------*/
+
+    header h1
+    {
+        font-size: 2.5em!important;
+    }
+    header p 
+    {
+        font-size: 1.7em!important;
+    }
+
+}
