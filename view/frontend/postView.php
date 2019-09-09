@@ -95,6 +95,13 @@
                         <label for="comment"> Commentaire </label>
                         <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
                     </div>
+                    <div class="form-check">
+                        <input type="checkbox" name="check" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                          *En cochant cette case, vous acceptez nos <a href="index.php?action=CGU">conditions d'utilisations.</a>
+                        </label>
+                    </div>
+                    <br/>
                     <div>
                         <input type="submit" class="btn btn-primary btn-submit" name="envoyer">
                     </div>
