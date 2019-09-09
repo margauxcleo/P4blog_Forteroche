@@ -83,7 +83,6 @@ body
     background-position: top; 
     background-size: cover;
 }
-
 img
 {
     width: 100%;
@@ -538,7 +537,7 @@ h3, #front-aside a
     }
 
 /* ---------------------------------------- */
-    /*---- couleur police ----*/
+    /*---- others ----*/
     footer
     {
         color: #FFF;
@@ -557,6 +556,12 @@ h3, #front-aside a
     {
         text-align: center;
     } 
+    .site_name
+    {
+        color: #5F98C5;
+    }
+
+
  
 /* ---------------------------------------- */ 
 /* ---- == MEDIAS QUERIS ---- */ 
