@@ -92,7 +92,7 @@ class BackendController
 	{
 		$posts = $this->postManager->getAllPosts();
 		
-		require('view/backend/updatePostsView.php');
+		require('view/backend/tableUpdatePostsView.php');
 	}
 
 	public function updateAPost()
