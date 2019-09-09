@@ -54,79 +54,161 @@ try {
 				}
 		}
 
+		elseif ($_GET['action'] == 'logOutRequest') {
+			$backendController->logOutRequest();
+		}
+
+		elseif ($_GET['action'] == 'logOut') { 
+		// == Verif nécessaire ac Quentin 
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else { 
+				$_SESSION = array();
+				session_destroy();
+				header('Location: index.php?action=listPosts');
+			}
+		}
+
 		elseif ($_GET['action'] == 'admin') {
+			// == Verif nécessaire ac Quentin 
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else {
 			$backendController->admin();
+			}
 		}
 
 		elseif ($_GET['action'] == 'tablePosts') {
+			// == Verif nécessaire ac Quentin 
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else {
 			$backendController->tablePosts();
+			}
 		}
 
-		elseif ($_GET['action'] == 'newPostPage') {
+		elseif ($_GET['action'] == 'newPostPage'){
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else {
 			$backendController->newPostPage();
+			}
 		}
 
 		elseif ($_GET['action'] == 'createNewPost') {
-			if (!empty($_POST['title']) && !empty($_POST['resume']) && !empty($_POST['content'])) {
-				$backendController->createNewPost($_POST['title'], $_POST['resume'], $_POST['content']);	
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
 			}
 			else {
-				throw new Exception('Tous les champs ne sont pas remplis !');
+				if (!empty($_POST['title']) && !empty($_POST['resume']) && !empty($_POST['content'])) {
+					$backendController->createNewPost($_POST['title'], $_POST['resume'], $_POST['content']);	
+				}
+				else {
+					throw new Exception('Tous les champs ne sont pas remplis !');
+				}
 			}
 		}
 
 		elseif ($_GET['action'] == 'tableUpdate') {
-			$backendController->tableUpdate();
-		}
-
-		elseif ($_GET['action'] == 'updateAPost') {
-			if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
-					$backendController->updateAPost();
-				}
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
 			else {
-				throw new Exception('Modification impossible, veuillez préciser le chapitre à modifier.');
+				$backendController->tableUpdate();
 			}	
 		}
 
-		elseif ($_GET['action'] == 'saveUpdatedPost') {
-			if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
-				if (!empty($_POST['title']) && !empty($_POST['resume']) && !empty($_POST['content'])) {
-
-					$backendController->saveUpdatedPost($_GET['id'], $_POST['title'], $_POST['resume'], $_POST['content']);	
-				}
-				else { 
-					throw new Exception('Attention, tous les champs doivent être remplis !');
-				}
+		elseif ($_GET['action'] == 'updateAPost') {
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
 			}
 			else {
-				throw new Exception('Enregistrement impossible, veuillez préciser le chapitre à modifier.');
+				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
+						$backendController->updateAPost();
+					}
+				else {
+					throw new Exception('Modification impossible, veuillez préciser le chapitre à modifier.');
+				}
+			}
+		}
+
+		elseif ($_GET['action'] == 'saveUpdatedPost') {
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else {
+				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
+					if (!empty($_POST['title']) && !empty($_POST['resume']) && !empty($_POST['content'])) {
+
+						$backendController->saveUpdatedPost($_GET['id'], $_POST['title'], $_POST['resume'], $_POST['content']);	
+					}
+					else { 
+						throw new Exception('Attention, tous les champs doivent être remplis !');
+					}
+				}
+				else {
+					throw new Exception('Enregistrement impossible, veuillez préciser le chapitre à modifier.');
+				}
 			}	
 		}	
 
 		elseif ($_GET['action'] == 'tableDelete') {
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else {
 			$backendController->tableDelete();
+			}
 		}
 
 		elseif ($_GET['action'] == 'deleteAPost') {
-			if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
-					$backendController->deleteAPost();
-				}
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
 			else {
-				throw new Exception('Suppression impossible, veuillez préciser le chapitre à supprimer.');
-			}	
+				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
+						$backendController->deleteAPost();
+					}
+				else {
+					throw new Exception('Suppression impossible, veuillez préciser le chapitre à supprimer.');
+				}	
+			}
 		}
 
 		elseif ($_GET['action'] == 'saveDelete') {
-			if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
-				$backendController->saveDelete($_GET['id']);
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
 			}
 			else {
-				throw new Exception('Suppression impossible, veuillez préciser le chapitre à supprimer.');
+				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
+					$backendController->saveDelete($_GET['id']);
+				}
+				else {
+					throw new Exception('Suppression impossible, veuillez préciser le chapitre à supprimer.');
+				}
 			}
 		}
 
 		elseif ($_GET['action'] == 'tableComments') {
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else {
 			$backendController->tableComments();
+			}
 		}
 
 		elseif ($_GET['action'] == 'signaledAComment') {
@@ -139,61 +221,111 @@ try {
 		}
 
 		elseif ($_GET['action'] == 'updateAComment') {
-			if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
-					$backendController->updateAComment();
-				}
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
 			else {
-				throw new Exception('Modification impossible, veuillez préciser l\'identifiant du commentaire à modifier.');
-			}	
+				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
+						$backendController->updateAComment();
+					}
+				else {
+					throw new Exception('Modification impossible, veuillez préciser l\'identifiant du commentaire à modifier.');
+				}	
+			}
 		}
  
 		elseif ($_GET['action'] == 'saveUpdatedComment') {
-			if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
-				if (!empty($_POST['comment'])) {
-
-					$backendController->saveUpdatedComment($_GET['id'], $_POST['comment']);	
-				}
-				else { 
-					throw new Exception('Attention, tous les champs doivent être remplis !');
-				}
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
 			}
 			else {
-				throw new Exception('Enregistrement impossible, veuillez préciser le commentaire à modifier.');
+				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
+					if (!empty($_POST['comment'])) {
+
+						$backendController->saveUpdatedComment($_GET['id'], $_POST['comment']);	
+					}
+					else { 
+						throw new Exception('Attention, tous les champs doivent être remplis !');
+					}
+				}
+				else {
+					throw new Exception('Enregistrement impossible, veuillez préciser le commentaire à modifier.');
+				}
 			}
 		}	
 
 		elseif ($_GET['action'] == 'deleteAComment') {
-			if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
-					$backendController->deleteAComment();
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
 			}
 			else {
-				throw new Exception('Suppression impossible, veuillez préciser le commentaire à supprimer.');
-			}	
+				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
+						$backendController->deleteAComment();
+				}
+				else {
+					throw new Exception('Suppression impossible, veuillez préciser le commentaire à supprimer.');
+				}	
+			}
 		}
 
 		elseif ($_GET['action'] == 'saveCommentDelete') {
-			if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
-				$backendController->saveCommentDelete($_GET['id']);
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
 			}
 			else {
-				throw new Exception('Suppression non enregistrée, nous ne reconnaissons pas l\'identifiant du commentaire.');
+				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
+					$backendController->saveCommentDelete($_GET['id']);
+				}
+				else {
+					throw new Exception('Suppression non enregistrée, nous ne reconnaissons pas l\'identifiant du commentaire.');
+				}
 			}
 		}
 
 		elseif ($_GET['action'] == 'contactSupport') {
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else {
 			$backendController->contactSupport();
+			}
 		}
 
 		elseif ($_GET['action'] == 'tools') {
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else {
 			$backendController->tools();
+			}
 		}
 
 		elseif ($_GET['action'] == 'suggestion') {
+			// == Verif nécessaire ac Quentin  
+			if (!empty($_SESSION['userID'])) {
+				header('Location: index.php?action=login');
+			}
+			else {
 			$backendController->suggestion();
+			}
 		}
 
 		elseif ($_GET['action'] == 'cookies') {
 			$frontendController->cookies();
+		}
+
+		elseif ($_GET['action'] == 'cgu') {
+			$frontendController->cgu();
+		}
+
+		elseif ($_GET['action'] == 'legalNotice') {
+			$frontendController->legalNotice();
 		}
 
 	}	

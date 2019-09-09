@@ -45,12 +45,6 @@
                             Accueil
                             <span class="sr-only">(current)</span>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#roman">Tous les épisodes</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#auteur">L'auteur</a>
                     </li>  
                 </ul>
                 <ul class="navbar-nav ml-auto nav-networks">
@@ -137,16 +131,16 @@
         <ul class="col-xs-12 col-sm-5 col-md-5 col-lg-4 col-xl-3 btn-group-vertical" role="group">
             <h3> Plus d'informations </h3>
             <li> 
-                <a class="btn btn-primary btn-footer" href="#conditions_utilisations" type="button">
+                <a class="btn btn-primary btn-footer" href="index.php?action=cgu" type="button">
 
                     <i class="fas fa-thumbtack"></i>
                     Conditions d'utilisations
                 </a> 
             </li>
             <li>
-                <a class="btn btn-primary btn-footer" href="#politique_confidentialité" type="button">
+                <a class="btn btn-primary btn-footer" href="index.php?action=legalNotice" type="button">
                     <i class="fas fa-landmark"></i>
-                    Politique de confidentialité
+                    Mentions légales
                 </a>
             </li>
             <li> 

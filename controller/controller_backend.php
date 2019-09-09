@@ -32,7 +32,7 @@ class BackendController
 		require('view/frontend/logInView.php');
 	}
 
-	public function login($email, $password) // AR avec Quentin
+	public function login($email, $password)
 	{
 
 		// if email existe => recuperer compte dans BDD
@@ -53,6 +53,11 @@ class BackendController
 		else { 
 			throw new Exception('Erreur avec les identifiants.'); 
 		}	
+	}
+
+	public function logOutRequest()
+	{
+		require('view/backend/logOutView.php');
 	}
 
 	public function admin()

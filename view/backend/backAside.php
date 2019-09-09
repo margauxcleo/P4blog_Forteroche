@@ -47,7 +47,7 @@
 
         <div class="dropdown-divider"></div>
         <li class="nav-item">
-          <a class="nav-link active" href="logOut.php"> 
+          <a class="nav-link active" href="index.php?action=logOutRequest"> 
             <i class="fas fa-power-off"></i>
             Déconnexion 
           </a>

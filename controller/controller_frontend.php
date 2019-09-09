@@ -67,5 +67,15 @@ class FrontendController
 	{
 		require('view/frontend/cookiesView.php');
 	}
+
+	public function cgu()
+	{
+		require('view/frontend/cguView.php');
+	}
+
+	public function legalNotice()
+	{
+		require('view/frontend/legalNoticeView.php');
+	}
 }
 
