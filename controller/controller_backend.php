@@ -55,6 +55,11 @@ class BackendController
 		}	
 	}
 
+	public function signInPage()
+	{
+		require('view/frontend/registerView.php');
+	}
+
 	public function logOutRequest()
 	{
 		require('view/backend/logOutView.php');
