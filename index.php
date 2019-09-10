@@ -54,6 +54,10 @@ try {
 				}
 		}
 
+		elseif ($_GET['action'] == 'signInPage') {
+			$backendController->signInPage();
+		}
+
 		elseif ($_GET['action'] == 'logOutRequest') {
 			$backendController->logOutRequest();
 		}
@@ -340,4 +344,4 @@ catch(Exception $e) {
 	require('view/frontend/errorView.php');	
 }
 
-
+?>
