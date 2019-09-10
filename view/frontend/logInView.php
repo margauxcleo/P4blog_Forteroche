@@ -28,7 +28,7 @@
     <p class="register_form">
       <span> Pas encore inscrit ? C'est par ici ! </span> 
       <br/>
-      <a class="btn btn-primary btn-post" href="index.php?action=newAccount">Créer un compte</a>
+      <a class="btn btn-primary btn-post" href="index.php?action=signInPage">Créer un compte</a>
     </p>
 
   </div>
