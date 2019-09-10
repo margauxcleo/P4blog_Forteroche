@@ -1,4 +1,3 @@
-
 /* Projet4: Blog de Jean Forteroche */
 
 /* ---------------------------------------- */
@@ -14,16 +13,14 @@
 /*---------------------------------------- */
 /* 
 
-#343a40: major grey (nav, footer, body)
-Dark Glodenroad: #BC7C0C (pubication date)
+#343a40 major grey: nav, footer, body;
+#BC7C0C Dark Glodenroad: pubication date;
+#5F98C5 Steel Blue: h2, h3,...main blue;
+#BE3D20 : warning comments & signaled comments
+#DEE2E6: table by bootstrap:;
 
-Skyblue : #6DC8E5
-Light Steel Blue : #D1D9E1
-Dark Okive Green : #575A43
-Steel Blue : #5F98C5 
-
-table by bootstrap: #dee2e6;
-warning (comments & signaled comments):; #BE3D20;
+#6DC8E5 Skyblue:no use at the moment;
+#D1D9E1 Light Steel Blue:no use at the moment
 
 */ 
 /* ---------------------------------------- */ 
@@ -458,6 +455,10 @@ h3, #front-aside a
         .admin .intro
         {
             text-decoration: underline;
+        }
+        .signaled-comment
+        {
+            margin-top: 1rem!important;
         }
 
 
