@@ -16,7 +16,7 @@
           <li class="nav-item">
             <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="list-group-item list-group-item-action button btn-primary btn-aside" type="button" >
               <i class="fas fa-bookmark"></i>
-              <?php echo htmlspecialchars($data['title']) ?>  
+              <?php echo htmlspecialchars($data['title']) ?>
             </a>
           </li> 
         <?php
