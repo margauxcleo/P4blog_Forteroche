@@ -98,7 +98,7 @@
                     <div class="form-check">
                         <input type="checkbox" name="check" class="form-check-input" id="dropdownCheck">
                         <label class="form-check-label" for="dropdownCheck">
-                          *En cochant cette case, vous acceptez nos <a href="index.php?action=CGU">conditions d'utilisations.</a>
+                          *En cochant cette case, vous acceptez nos <a href="index.php?action=cgu">conditions d'utilisations.</a>
                         </label>
                     </div>
                     <br/>
