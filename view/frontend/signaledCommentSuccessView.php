@@ -7,7 +7,7 @@
 
     	<div class="posts col-xs-12 offset-sm-1 col-sm-10 offset-md-0 col-md-7 offset-lg-0 col-lg-7 col-xl-8">
 
-    		<p class="alert alert-success" role="alert"> Le commentaire a été signalé avec succès !        
+    		<p class="alert alert-success signaled-comment" role="alert"> Le commentaire a été signalé avec succès !        
             </p>
 
 		</div>
