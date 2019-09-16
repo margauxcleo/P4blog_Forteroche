@@ -56,7 +56,6 @@
     font-family: 'bellota_regular';
     src: url('../polices/bellota_regular/Bellota-Regular-webfont.eot');
     src: url('../polices/bellota_regular/Bellota-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../polices/bellota_regular/Bellota-Regular-webfont.woff2') format('woff2'),
          url('../polices/bellota_regular/Bellota-Regular-webfont.woff') format('woff'),
          url('../polices/bellota_regular/Bellota-Regular-webfont.ttf') format('truetype'),
          url('../polices/bellota_regular/Bellota-Regular-webfont.svg#bellotaregular') format('svg');
