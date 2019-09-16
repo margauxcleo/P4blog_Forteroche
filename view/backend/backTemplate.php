@@ -3,31 +3,35 @@
 
   <head>
 
-      <meta charset="utf-8"> 
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Billet simple pour l'Alaska</title>
-      <meta name="description" content="Le site du nouveau roman de Jean Forteroche">
+    <meta charset="utf-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Billet simple pour l'Alaska</title>
+    <meta name="description" content="Le site du nouveau roman de Jean Forteroche">
 
-      
-      <!-- CDN Bootstrap -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <!-- CDC de fontawesome -->
-      <script src="https://kit.fontawesome.com/d9b0e2adfb.js"></script>
-      <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
-      <!-- feuille de style perso -->
-      <link rel="stylesheet" href="public/css/style.css"/>
-      <link rel="stylesheet" href="../../public/css/style.css"/>
-      
+     
+    <!-- CDN Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CDC de fontawesome -->
+    <script src="https://kit.fontawesome.com/d9b0e2adfb.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+    <!-- CDC de Tiny -->
+    <script src="https://cdn.tiny.cloud/1/rk8qwx3pxyug2vnw0uple2n405a8mfwx2fjvyzpy7lvdketk/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+    tinymce.init({
+        selector: '#mytextarea'
+    });
+    </script>
+    <!-- feuille de style perso -->
+    <link rel="stylesheet" href="public/css/style.css"/>
+    <link rel="stylesheet" href="../../public/css/style.css"/>
 
-  </head>
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
   </head>
 
