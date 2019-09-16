@@ -15,13 +15,6 @@
         <!-- CDC de fontawesome -->
         <script src="https://kit.fontawesome.com/d9b0e2adfb.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
-        <!-- CDC de Tiny -->
-        <script src="https://cdn.tiny.cloud/1/rk8qwx3pxyug2vnw0uple2n405a8mfwx2fjvyzpy7lvdketk/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-        <script>
-        tinymce.init({
-            selector: '#mytextarea'
-        });
-        </script>
         <!-- feuille de style perso -->
         <link rel="stylesheet" href="public/css/style.css"/>
         <link rel="stylesheet" href="../../public/css/style.css"/>
