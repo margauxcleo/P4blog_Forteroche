@@ -31,7 +31,7 @@
                 
                 <p class="content">
                 <?php
-                echo nl2br(htmlspecialchars($post['content']));
+                echo ($post['content']);
                 ?>
                 </p>
 
