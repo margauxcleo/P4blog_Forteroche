@@ -15,18 +15,26 @@
         <!-- CDC de fontawesome -->
         <script src="https://kit.fontawesome.com/d9b0e2adfb.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
+        <!-- CDC de Tiny -->
+        <script src="https://cdn.tiny.cloud/1/rk8qwx3pxyug2vnw0uple2n405a8mfwx2fjvyzpy7lvdketk/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+        </script>
         <!-- feuille de style perso -->
         <link rel="stylesheet" href="public/css/style.css"/>
         <link rel="stylesheet" href="../../public/css/style.css"/>
 
-    </head>
-
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+    </head>
+
+        
 
     </head>
 
