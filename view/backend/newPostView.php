@@ -28,7 +28,7 @@
                         <i class="fas fa-glasses"></i>
                         Résumé du chapitre
                     </label>
-                    <textarea id="mytextarea"type="text" name="resume" id="resume" class="form-control" rows="4" required>
+                    <textarea type="text" name="resume" id="resume" class="form-control mytinytextarea" rows="4" required>
                     </textarea>
                 </div>
                 <div class="form-group">
@@ -36,7 +36,7 @@
                         <i class="fas fa-bookmark"></i>
                         Contenu
                     </label>
-                    <textarea type="text" name="content" id="content" class="form-control" rows="10" required>
+                    <textarea type="text" name="content" id="content" class="form-control mytinytextarea" rows="10" required>
                     </textarea>
                 </div>
                 <div>
