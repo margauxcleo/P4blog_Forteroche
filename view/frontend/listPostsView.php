@@ -19,18 +19,16 @@
             <?php echo htmlspecialchars($data['title']); ?>
           </h3>
           <p class="resume">
-            <?php echo nl2br(htmlspecialchars($data['resume'])); ?>
-            <br />
+            <?php echo ($data['resume']); ?>
           </p>
           <p class="publication_date_fr">
             <i class="far fa-calendar"></i>
-            Publié le <?php echo htmlspecialchars($data['publication_date_fr']); ?>
+            Publié le <?php echo ($data['publication_date_fr']); ?>
           </p>
           <a href="index.php?action=post&amp;id=<?= $data['id'] ?>" class="btn btn-outline-primary btn-post" role="button"> 
             <i class="fas fa-book-reader"></i>
             Lire le chapitre en entier
           </a>
-          <br/>
 
         </article>
     
