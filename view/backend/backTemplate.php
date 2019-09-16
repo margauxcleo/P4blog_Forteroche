@@ -19,12 +19,11 @@
     <script src="https://cdn.tiny.cloud/1/rk8qwx3pxyug2vnw0uple2n405a8mfwx2fjvyzpy7lvdketk/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
     tinymce.init({
-        selector: '#mytextarea'
+        selector: '.mytinytextarea'
     });
     </script>
     <!-- feuille de style perso -->
     <link rel="stylesheet" href="public/css/style.css"/>
-    <link rel="stylesheet" href="../../public/css/style.css"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
