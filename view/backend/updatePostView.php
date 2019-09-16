@@ -34,8 +34,8 @@
 	    					<i class="fas fa-glasses"></i>
 	    					Résumé du chapitre
 	    				</label>
-	    				<textarea type="resume" name="resume" id="resume" class="form-control" placeholder="" rows="4">
-	    					<?php echo nl2br(htmlspecialchars($post['resume'])); ?>
+	    				<textarea type="resume" name="resume" id="resume" class="form-control mytinytextarea" placeholder="" rows="4">
+	    					<?php echo ($post['resume']); ?>
 	    				</textarea>
 	    			</div>
 	    			<div class="form-group">
@@ -43,8 +43,8 @@
 	    					<i class="fas fa-bookmark"></i>
 	    					Contenu
 	    				</label>
-	    				<textarea type="content" name="content" id="content" class="form-control" placeholder="" rows="10">
-	    					<?php echo nl2br(htmlspecialchars($post['content'])); ?>
+	    				<textarea type="content" name="content" id="content" class="form-control mytinytextarea" placeholder="" rows="10">
+	    					<?php echo ($post['content']); ?>
 	    				</textarea>
 					</div>
 					<div>
