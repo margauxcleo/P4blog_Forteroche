@@ -59,52 +59,56 @@
   </body>
 
   <footer class="row">
-        
-    <ul class="col-xs-12 offset-sm-1 col-sm-5 offset-md-1 col-md-5 offset-lg-2 col-lg-4 offset-xl-3 col-xl-3 btn-group-vertical" id="reseaux_sociaux" role="group">
-      <h3> Support </h3>
-      <li> 
-        <a class="btn btn-primary btn-footer"
-            href="index.php?action=tools" type="button"> 
-          <i class="fas fa-cog"></i>
-                Outils
-        </a>
-      </li>
-      <li>
-        <a class="btn btn-primary btn-footer" href="index.php?action=contactSupport" type="button">
-          <i class="fas fa-tools"></i>
-                Nous contacter
-        </a>
-      </li>
-      <li> 
-        <a class="btn btn-primary btn-footer" href="index.php?action=suggestion" type="button">
-          <i class="fas fa-lightbulb"></i>
-                Suggestions d'améliorations
-        </a>
-      </li>
-    </ul>
 
-    <ul class="col-xs-12 col-sm-5 col-md-5 col-lg-4 col-xl-3 btn-group-vertical" role="group">
+    <div class="col-xs-12 offset-sm-1 col-sm-5 offset-md-1 col-md-5 offset-lg-2 col-lg-4 offset-xl-3 col-xl-3 div-footer">
+        <h3> Support </h3> 
+        <ul class=" btn-group-vertical" id="reseaux_sociaux" role="group">
+          <li> 
+            <a class="btn btn-primary btn-footer"
+                href="index.php?action=tools" type="button"> 
+              <i class="fas fa-cog"></i>
+                    Outils
+            </a>
+          </li>
+          <li>
+            <a class="btn btn-primary btn-footer" href="index.php?action=contactSupport" type="button">
+              <i class="fas fa-tools"></i>
+                    Nous contacter
+            </a>
+          </li>
+          <li> 
+            <a class="btn btn-primary btn-footer" href="index.php?action=suggestion" type="button">
+              <i class="fas fa-lightbulb"></i>
+                    Suggestions d'améliorations
+            </a>
+          </li>
+        </ul>
+    </div>
+
+    <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 col-xl-3 div-footer">
         <h3> Plus d'informations </h3>
-        <li> 
-            <a class="btn btn-primary btn-footer" href="index.php?action=cgu" type="button">
+        <ul class=" btn-group-vertical" role="group"> 
+            <li> 
+                <a class="btn btn-primary btn-footer" href="index.php?action=cgu" type="button">
 
-                <i class="fas fa-thumbtack"></i>
-                Conditions d'utilisations
-            </a> 
-        </li>
-        <li>
-            <a class="btn btn-primary btn-footer" href="index.php?action=legalNotice" type="button">
-                <i class="fas fa-landmark"></i>
-                Mentions Légales
-            </a>
-        </li>
-        <li> 
-            <a class="btn btn-primary btn-footer" href="index.php?action=cookies" type="button">
-                <i class="fas fa-eye"></i>
-                Cookies 
-            </a>
-        </li>
-    </ul>
+                    <i class="fas fa-thumbtack"></i>
+                    Conditions d'utilisations
+                </a> 
+            </li>
+            <li>
+                <a class="btn btn-primary btn-footer" href="index.php?action=legalNotice" type="button">
+                    <i class="fas fa-landmark"></i>
+                    Mentions Légales
+                </a>
+            </li>
+            <li> 
+                <a class="btn btn-primary btn-footer" href="index.php?action=cookies" type="button">
+                    <i class="fas fa-eye"></i>
+                    Cookies 
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <p class="copyright offset-xs-2 col-xs-8 offset-sm-4 offset-lg-4 offset-lg-5"> 
         <i class="fas fa-copyright"></i>
