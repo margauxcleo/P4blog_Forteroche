@@ -4,22 +4,21 @@
 /* ---- == SUMMARY ----*/
 /*---------------------------------------- */ 
 
-/* L - 26 - COLOR CODES */ 
-/* L - 41 - DÉFINITIONS DES POLICES */
-/* L - 81 - ÉLÉMENTS PRINCIPAUX */ 
-    /* L - 127 - BUTTONS */
-    /* L - 260 - ALL FORMS*/
-/* L - 351 - HEADER */
-/* L - 379 - BLOC PAGE */
-/* L - 539 - FOOTER */
-/* L - 577 - MEDIAS QUERIES */
-    /* L - 581 - entre 300 et 337px */
-    /* L - 598 - entre 300 et 767px */
-    /* L - 624 - entre 394 et 767px */
-    /* L - 634 - à partir de 767.98px*/
-    /* L - 718 - à partir de 992px */ 
-    /* L - 748 - à partir de 1200px */
-    /* L - 782 - à partir de 1440px */
+/* L - 25 - COLOR CODES */ 
+/* L - 40 - DÉFINITIONS DES POLICES */
+/* L - 80 - ÉLÉMENTS PRINCIPAUX */ 
+    /* L - 128 - BUTTONS */
+    /* L - 261 - ALL FORMS*/
+/* L - 352 - HEADER */
+/* L - 395 - BLOC PAGE */
+/* L - 550 - FOOTER */
+/* L - 588 - MEDIAS QUERIES */
+    /* L - 591 - à partir de 397px */
+    /* L - 603 - entre 300 et 767px */
+    /* L - 629 - à partir de 767.98px*/
+    /* L - 697 - à partir de 992px */ 
+    /* L - 727 - à partir de 1200px */
+    /* L - 761 - à partir de 1440px */
 
  
 /* ---------------------------------------- */
@@ -89,10 +88,12 @@ body
 
     background-image: url("../images/header.jpg");
     background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-position: top; 
+    background-attachment: fixed;  
+    background-position: top;  
     background-size: cover;
+    -webkit-background-size: cover;
 }
+
 img
 {
     width: 100%;
@@ -352,11 +353,26 @@ h3, #front-aside a
 /*---------------------------------------- */ 
  
 /* ---------------------------------------- */
-    /*---- header titre sur image ----*/
+    /*---- header - titre ----*/
 
     .texte-header
     {
-        display: none;
+        margin-top: 115px;
+    }
+
+    header h1, header p
+    {
+        font-family: 'code_light',sans-serif!important;
+        font-size: 1.8em!important; 
+        font-weight: bold;
+        color: #343a40 ;
+        padding: 10px;
+        text-shadow: 1px 1px 2px #343a40; 
+    }
+
+    header p
+    {
+        border-top: 3px groove #343a40;
     }
      
 /* ---------------------------------------- */
@@ -378,11 +394,6 @@ h3, #front-aside a
 /* ---------------------------------------- */ 
 /* ---- == BLOC PAGE ----*/ 
 /*---------------------------------------- */ 
-
-.bloc_page
-{
-    margin-top: 100px;
-}
 
 /* ---------------------------------------- */
     /*---- only back view ----*/
@@ -577,22 +588,16 @@ h3, #front-aside a
 /* ---- == MEDIAS QUERIS ---- */ 
 /*---------------------------------------- */ 
 
+/* ---- == à partir de 397px ---- */
 
-/* ---- == entre 300 et 337px ---- */
-
-@media screen and (min-width: 300px) and (max-width: 337px) {
-
-/* ---------------------------------------- */
-/*---- HEADER ----*/
-/* ---------------------------------------- */
+@media(min-width: 397px) {
 
 /* ---------------------------------------- */
-    /*---- back header ----*/
-    .bloc_page
+    /*---- header - titre ----*/
+    .texte-header
     {
-        margin-top: 85px!important;
+        margin-top: 85px;
     }
-
 }
 
 /* ---- == entre 300 et 767px ---- */
@@ -621,16 +626,6 @@ h3, #front-aside a
 
 }
 
-/* ---- == entre 394 et 767px ---- */
-
-@media screen and (min-width: 394px) and (max-width: 767px) {
-
-    .bloc_page
-    {
-        margin-top: 56px;
-    }
-}
-
 /* ---- == à partir de 767.98px ---- */
 
 @media(min-width:767.98px) {
@@ -642,25 +637,9 @@ h3, #front-aside a
 /* ---------------------------------------- */
     /*---- header - titre ----*/
 
-    .texte-header
-    {
-        display: block;
-        margin-top: 110px;
-    }
-
     header h1, header p
     {
-        font-family: 'code_light',sans-serif!important;
         font-size: 2em!important; 
-        font-weight: bold;
-        color: #343a40 ;
-        padding: 10px;
-        text-shadow: 1px 1px 2px #343a40; 
-    }
-
-    header p
-    {
-        border-top: 3px groove #343a40;
     }
 
 /* ---------------------------------------- */
