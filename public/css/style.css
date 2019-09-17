@@ -3,10 +3,24 @@
 /* ---------------------------------------- */
 /* ---- == SUMMARY ----*/
 /*---------------------------------------- */ 
- 
-/* L - 1 - */
-/* L - 2 - */ 
-/* L - 3 - */ 
+
+/* L - 26 - COLOR CODES */ 
+/* L - 41 - DÉFINITIONS DES POLICES */
+/* L - 81 - ÉLÉMENTS PRINCIPAUX */ 
+    /* L - 127 - BUTTONS */
+    /* L - 260 - ALL FORMS*/
+/* L - 351 - HEADER */
+/* L - 379 - BLOC PAGE */
+/* L - 539 - FOOTER */
+/* L - 577 - MEDIAS QUERIES */
+    /* L - 581 - entre 300 et 337px */
+    /* L - 598 - entre 300 et 767px */
+    /* L - 624 - entre 394 et 767px */
+    /* L - 634 - à partir de 767.98px*/
+    /* L - 718 - à partir de 992px */ 
+    /* L - 748 - à partir de 1200px */
+    /* L - 782 - à partir de 1440px */
+
  
 /* ---------------------------------------- */
 /* ---- == COLOR CODES ----*/
@@ -569,7 +583,7 @@ h3, #front-aside a
 @media screen and (min-width: 300px) and (max-width: 337px) {
 
 /* ---------------------------------------- */
-/*---- == HEADER ----*/
+/*---- HEADER ----*/
 /* ---------------------------------------- */
 
 /* ---------------------------------------- */
@@ -586,7 +600,7 @@ h3, #front-aside a
 @media screen and (min-width: 337px) and (max-width: 767px) { 
 
 /* ---------------------------------------- */
-/* ---- == HEADER ---- */
+/* ---- HEADER ---- */
 /* ---------------------------------------- */
 
 /* ---------------------------------------- */
@@ -735,7 +749,7 @@ h3, #front-aside a
 
 @media(min-width:1200px) {
 
-/* -------- == section article  ------------*/
+/* -------- section article  ------------*/
 
     .bloc_page
     {
