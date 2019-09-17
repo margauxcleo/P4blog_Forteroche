@@ -19,7 +19,11 @@
     <script src="https://cdn.tiny.cloud/1/rk8qwx3pxyug2vnw0uple2n405a8mfwx2fjvyzpy7lvdketk/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
     tinymce.init({
-        selector: '.mytinytextarea'
+        selector: '.mytinytextarea',
+        language: 'fr_FR',
+        force_br_newlines: true,
+        menubar: false,
+        toolbar: 'insertfile undo redo | bold italic | alignleft | alignjustify | bullist numlist outdent indent'
     });
     </script>
     <!-- feuille de style perso -->
