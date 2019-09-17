@@ -95,63 +95,68 @@
 
     <footer class="row">
         
-        <ul class="col-xs-12 offset-sm-1 col-sm-5 offset-md-1 col-md-5 offset-lg-2 col-lg-4 offset-xl-3 col-xl-3 btn-group-vertical" id="reseaux_sociaux" role="group">
+        <div class="col-xs-12 offset-sm-1 col-sm-5 offset-md-1 col-md-5 offset-lg-2 col-lg-4 offset-xl-3 col-xl-3 div-footer"> 
             <h3> Réseaux sociaux </h3>
-            <li> 
-                <a class="btn btn-primary btn-footer"
-                href="https://www.facebook.com/" type="button"> 
-                    <i class="fab fa-facebook-square"></i>
-                    Voir la page Facebook
-                </a>
-            </li>
-            <li>
-                <a class="btn btn-primary btn-footer" href="https://www.instagram.com/?hl=fr" type="button">
-                    <i class="fab fa-instagram"></i>
-                    Instagram du livre
-                </a>
-            </li>
-            <li>
-                <a class="btn btn-primary btn-footer" href="https://www.instagram.com/?hl=fr" type="button">
-                    <i class="fab fa-instagram"></i>
-                    Instagram de J.Forteroche 
-                </a>
-            </li>
-            <li> 
-                <a class="btn btn-primary btn-footer" href="https://twitter.com/?lang=fr" type="button">
-                    <i class="fab fa-twitter-square"></i>
-                    Twitter 
-                </a>
-            </li>
-        </ul>
+            <ul class="btn-group-vertical" id="reseaux_sociaux" role="group">
+                <li> 
+                    <a class="btn btn-primary btn-footer"
+                    href="https://www.facebook.com/" type="button"> 
+                        <i class="fab fa-facebook-square"></i>
+                        Voir la page Facebook
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btn-primary btn-footer" href="https://www.instagram.com/?hl=fr" type="button">
+                        <i class="fab fa-instagram"></i>
+                        Instagram du livre
+                    </a>
+                </li>
+                <li>
+                    <a class="btn btn-primary btn-footer" href="https://www.instagram.com/?hl=fr" type="button">
+                        <i class="fab fa-instagram"></i>
+                        Instagram de J.Forteroche 
+                    </a>
+                </li>
+                <li> 
+                    <a class="btn btn-primary btn-footer" href="https://twitter.com/?lang=fr" type="button">
+                        <i class="fab fa-twitter-square"></i>
+                        Twitter 
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-        <ul class="col-xs-12 col-sm-5 col-md-5 col-lg-4 col-xl-3 btn-group-vertical" role="group">
+        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 col-xl-3 div-footer">
             <h3> Plus d'informations </h3>
-            <li> 
-                <a class="btn btn-primary btn-footer" href="index.php?action=cgu" type="button">
+            <ul class="btn-group-vertical" role="group">
+                
+                <li> 
+                    <a class="btn btn-primary btn-footer" href="index.php?action=cgu" type="button">
 
-                    <i class="fas fa-thumbtack"></i>
-                    Conditions d'utilisations
-                </a> 
-            </li>
-            <li>
-                <a class="btn btn-primary btn-footer" href="index.php?action=legalNotice" type="button">
-                    <i class="fas fa-landmark"></i>
-                    Mentions légales
-                </a>
-            </li>
-            <li> 
-                <a class="btn btn-primary btn-footer" href="index.php?action=cookies" type="button">
-                    <i class="fas fa-eye"></i>
-                    Cookies 
-                </a>
-            </li>
-            <li> 
-                <a class="btn btn-primary btn-footer" href="index.php?action=contactMe" type="button">
-                    <i class="fas fa-envelope"></i>
-                    Contact 
-                </a>
-            </li>
-        </ul>
+                        <i class="fas fa-thumbtack"></i>
+                        Conditions d'utilisations
+                    </a> 
+                </li>
+                <li>
+                    <a class="btn btn-primary btn-footer" href="index.php?action=legalNotice" type="button">
+                        <i class="fas fa-landmark"></i>
+                        Mentions légales
+                    </a>
+                </li>
+                <li> 
+                    <a class="btn btn-primary btn-footer" href="index.php?action=cookies" type="button">
+                        <i class="fas fa-eye"></i>
+                        Cookies 
+                    </a>
+                </li>
+                <li> 
+                    <a class="btn btn-primary btn-footer" href="index.php?action=contactMe" type="button">
+                        <i class="fas fa-envelope"></i>
+                        Contact 
+                    </a>
+                </li>
+            </ul>
+        </div>
 
         <p class="offset-xs-2 col-xs-8 offset-sm-4 offset-lg-4 offset-lg-5">
             <a class="admin-login btn btn-primary btn-footer" href="index.php?action=logInPage" type="button">
