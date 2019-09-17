@@ -12,13 +12,13 @@
 /* L - 352 - HEADER */
 /* L - 395 - BLOC PAGE */
 /* L - 550 - FOOTER */
-/* L - 588 - MEDIAS QUERIES */
-    /* L - 591 - à partir de 397px */
-    /* L - 603 - entre 300 et 767px */
-    /* L - 629 - à partir de 767.98px*/
-    /* L - 697 - à partir de 992px */ 
-    /* L - 727 - à partir de 1200px */
-    /* L - 761 - à partir de 1440px */
+/* L - 589 - MEDIAS QUERIES */
+    /* L - 592 - à partir de 397px */
+    /* L - 604 - entre 300 et 767px */
+    /* L - 630 - à partir de 767.98px*/
+    /* L - 698 - à partir de 992px */ 
+    /* L - 728 - à partir de 1200px */
+    /* L - 762 - à partir de 1440px */
 
  
 /* ---------------------------------------- */
@@ -563,16 +563,17 @@ h3, #front-aside a
     {
         color: #FFF;
     }
+    .div-footer
+    {
+       border-bottom: 2px groove #FFF; 
+       margin-top: 30px;
+       margin-bottom: 30px;
+    }
     footer ul
     {
         list-style: none;
-        margin-top: 20px!important;
-    }
-    footer ul
-    {
-        border-bottom: 2px groove #FFF;
-        padding: 15px!important;
-    }
+        padding: 0px!important;
+    }    
     .copyright
     {
         text-align: center;
