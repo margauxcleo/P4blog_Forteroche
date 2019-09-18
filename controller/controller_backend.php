@@ -131,15 +131,18 @@ class BackendController
 		require('view/backend/tableDeletePostsView.php');
 	}
 
+	// modif en cours 
 	public function deleteAPost()
-	{
+	{	
 		$post = $this->postManager->getPost($_GET['id']);
 		
 		require('view/backend/deletePostView.php');
 	}
 
+	 
 	public function saveDelete($postId)
 	{
+		$deletedPostComment = $this->commentManager->deletePostComment($postId);
 		$deletedPost = $this->postManager->deletePost($postId);
 
 		if($deletedPost === false) {
@@ -148,6 +151,8 @@ class BackendController
 
 		require('view/backend/deletePostSuccessView.php');
 	}
+
+	// fin zone de modif
 
 	public function tableComments()
 	{

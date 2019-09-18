@@ -78,4 +78,14 @@ class CommentManager extends Manager
 
 		return $deletedComment;
 	}
+
+	// pour que les commentaires liés à un post supprimé soient également supprimés
+
+	public function deletePostComment($postId)
+	{
+		$deletedPostComment = $this->db->prepare('DELETE  FROM comments WHERE post_id = ?');
+		$deletedPostComment->execute(array($postId));
+
+		return $deletedPostComment;
+	}
 }
