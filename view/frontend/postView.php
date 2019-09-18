@@ -96,9 +96,9 @@
                         <textarea class="form-control" id="comment" name="comment" rows="3"></textarea>
                     </div>
                     <div class="form-check">
-                        <input type="checkbox" name="check" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck">
-                          *En cochant cette case, vous acceptez nos <a href="index.php?action=cgu">conditions d'utilisations.</a>
+                        <input type="checkbox" name="checkbox_cgu" class="form-check-input" id="checkbox_cgu">
+                        <label class="form-check-label" for="checkbox_cgu">
+                          *En cochant cette case, vous acceptez nos <a href="index.php?action=cgu">Conditions Générales d'Utilisations.</a>
                         </label>
                     </div>
                     <br/>

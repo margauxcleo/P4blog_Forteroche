@@ -23,13 +23,19 @@ try {
 				throw new Exception('Aucun identifiant de billet envoyé');
 			}
 		}
+		
 		elseif ($_GET['action'] == 'addComment') {
 			if (isset($_GET['id']) && $_GET['id'] >=0 ) {
-				if (!empty($_POST['author']) && !empty($_POST['comment'])) {
-					$frontendController->addComment($_GET['id'], $_POST['author'], $_POST['comment']);
+				if (isset($_POST['checkbox_cgu']) && !empty($_POST['checkbox_cgu'])) {
+					if (!empty($_POST['author']) && !empty($_POST['comment'])) {
+						$frontendController->addComment($_GET['id'], $_POST['author'], $_POST['comment']);
+					}
+					else {
+						throw new Exception('Tous les champs ne sont pas remplis !');
+					}
 				}
 				else {
-					throw new Exception('Tous les champs ne sont pas remplis !');
+					throw new Exception('Il est obligatoire d\'accepter nos Conditions Générales d\'Utilisations. Veuillez cocher la case correspondante pour poster votre commentaire.');
 				}
 			}
 			else {
