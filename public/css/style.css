@@ -11,14 +11,14 @@
     /* L - 261 - ALL FORMS*/
 /* L - 352 - HEADER */
 /* L - 395 - BLOC PAGE */
-/* L - 550 - FOOTER */
-/* L - 589 - MEDIAS QUERIES */
-    /* L - 592 - à partir de 397px */
-    /* L - 604 - entre 300 et 767px */
-    /* L - 630 - à partir de 767.98px*/
-    /* L - 698 - à partir de 992px */ 
-    /* L - 728 - à partir de 1200px */
-    /* L - 762 - à partir de 1440px */
+/* L - 554 - FOOTER */
+/* L - 593 - MEDIAS QUERIES */
+    /* L - 596 - à partir de 397px */
+    /* L - 610 - entre 300 et 767px */
+    /* L - 634 - à partir de 767.98px*/
+    /* L - 702 - à partir de 992px */ 
+    /* L - 732 - à partir de 1200px */
+    /* L - 766 - à partir de 1440px */
 
  
 /* ---------------------------------------- */
@@ -520,6 +520,10 @@ h3, #front-aside a
         .posts article
         {
             border-top: 2px groove #343a40;
+        }
+        .posts article p
+        {
+            text-align: justify!important;
         }
         .listAllPosts ul 
         {
