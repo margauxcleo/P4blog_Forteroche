@@ -21,9 +21,10 @@
     tinymce.init({
         selector: '.mytinytextarea',
         language: 'fr_FR',
+        font_formats: 'bellota_regular=arial,open_sansregular,sans-serif',
         force_br_newlines: true,
         menubar: false,
-        toolbar: 'insertfile undo redo | bold italic | alignleft | alignjustify | bullist numlist outdent indent'
+        toolbar: 'insertfile undo redo | bold italic | bullist numlist outdent indent'
     });
     </script>
     <!-- feuille de style perso -->
