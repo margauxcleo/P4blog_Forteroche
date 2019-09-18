@@ -63,9 +63,8 @@ try {
 		}
 
 		elseif ($_GET['action'] == 'logOut') { 
-		// == Verif nécessaire ac Quentin -> en a-t-on vraiment besoin ici ?
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else { 
 				$_SESSION = array();
@@ -74,11 +73,9 @@ try {
 			}
 		}
 
-		// suppression de la partie controle session - test
-		elseif ($_GET['action'] == 'admin') {
-			// == Verif nécessaire ac Quentin 
+		elseif ($_GET['action'] == 'admin') { 
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 			$backendController->admin();
@@ -86,19 +83,17 @@ try {
 		}
 
 		elseif ($_GET['action'] == 'tablePosts') {
-			// == Verif nécessaire ac Quentin 
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 			$backendController->tablePosts();
 			}
 		}
 
-		elseif ($_GET['action'] == 'newPostPage'){
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'newPostPage'){ 
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 			$backendController->newPostPage();
@@ -106,9 +101,8 @@ try {
 		}
 
 		elseif ($_GET['action'] == 'createNewPost') {
-			// == Verif nécessaire ac Quentin  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				if (!empty($_POST['title']) && !empty($_POST['resume']) && !empty($_POST['content'])) {
@@ -121,19 +115,17 @@ try {
 		}
 
 		elseif ($_GET['action'] == 'tableUpdate') {
-			// == Verif nécessaire ac Quentin  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				$backendController->tableUpdate();
 			}	
 		}
 
-		elseif ($_GET['action'] == 'updateAPost') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'updateAPost') { 
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
@@ -145,10 +137,9 @@ try {
 			}
 		}
 
-		elseif ($_GET['action'] == 'saveUpdatedPost') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'saveUpdatedPost') { 
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
@@ -166,20 +157,18 @@ try {
 			}	
 		}	
 
-		elseif ($_GET['action'] == 'tableDelete') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'tableDelete') { 
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 			$backendController->tableDelete();
 			}
 		}
 
-		elseif ($_GET['action'] == 'deleteAPost') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'deleteAPost') {  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
@@ -191,10 +180,9 @@ try {
 			}
 		}
 
-		elseif ($_GET['action'] == 'saveDelete') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'saveDelete') {  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
@@ -206,10 +194,9 @@ try {
 			}
 		}
 
-		elseif ($_GET['action'] == 'tableComments') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'tableComments') {  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 			$backendController->tableComments();
@@ -225,10 +212,9 @@ try {
 			}
 		}
 
-		elseif ($_GET['action'] == 'updateAComment') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'updateAComment') {  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
@@ -240,10 +226,9 @@ try {
 			}
 		}
  
-		elseif ($_GET['action'] == 'saveUpdatedComment') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'saveUpdatedComment') {  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
@@ -261,10 +246,9 @@ try {
 			}
 		}	
 
-		elseif ($_GET['action'] == 'deleteAComment') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'deleteAComment') {  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
@@ -276,10 +260,9 @@ try {
 			}
 		}
 
-		elseif ($_GET['action'] == 'saveCommentDelete') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'saveCommentDelete') {  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 				if (isset($_GET['id']) && $_GET['id'] >= 0 ) {
@@ -291,30 +274,27 @@ try {
 			}
 		}
 
-		elseif ($_GET['action'] == 'contactSupport') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'contactSupport') {  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 			$backendController->contactSupport();
 			}
 		}
 
-		elseif ($_GET['action'] == 'tools') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'tools') {  
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 			$backendController->tools();
 			}
 		}
 
-		elseif ($_GET['action'] == 'suggestion') {
-			// == Verif nécessaire ac Quentin  
+		elseif ($_GET['action'] == 'suggestion') { 
 			if (empty($_SESSION['userID'])) {
-				header('Location: index.php?action=login');
+				header('Location: index.php?action=logInPage');
 			}
 			else {
 			$backendController->suggestion();
