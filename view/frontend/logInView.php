@@ -15,13 +15,8 @@
         <label for="password">Votre mot de passe</label>
         <input type="password" name="password" class="form-control" id="password" placeholder="">
       </div>
-      <div class="form-check">
-        <input type="checkbox" name="check" class="form-check-input" id="dropdownCheck">
-        <label class="form-check-label" for="dropdownCheck">
-          Se souvenir de moi
-        </label>
-      </div>
       <br/>
+
       <button type="submit" class="btn btn-primary btn-submit" name="logIn">Se connecter</button>
     </form>
 
